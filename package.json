@@ -1,0 +1,27 @@
+{
+  "name": "edc-receiver-endpoint",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run start:production",
+    "lint": "prettier --write '**/*.js' && standard --fix '**/*.js'",
+    "depcheck": "depcheck",
+    "start:production": "cross-env NODE_ENV=production node .",
+    "start:development": "cross-env NODE_ENV=development node --inspect=0.0.0.0:9229 --watch ."
+  },
+  "author": "Sebastian Alberternst <sebastian.alberternst@dfki.de>",
+  "license": "MIT",
+  "dependencies": {
+    "env-var": "^7.5.0",
+    "express": "^4.19.2",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.7",
+    "prettier": "^3.3.2",
+    "standard": "^17.1.0"
+  }
+}
